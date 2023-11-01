@@ -10,31 +10,32 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var viewModel: ListViewModel = ListViewModel()
-    
+    @ObservedObject var listViewModel = ListViewModel.shared 
     
     var body: some View {
         
         NavigationStack {
-            List(viewModel.carItems) { car in
-                NavigationLink(
-                    destination: CarDetailScreen(car: car),
-                    label: {
-                        VStack(alignment:.leading) {
-                            Text(car.title)
-                            Text(car.description)
-                                .foregroundColor(.secondary)
+            List {
+                ForEach(listViewModel.carItems.indices, id: \.self) { index in
+                    NavigationLink(
+                        destination: CarDetailScreen(car: index),
+                        label: {
+                            VStack(alignment: .leading) {
+                                Text(listViewModel.carItems[index].title)
+                                Text(listViewModel.carItems[index].description)
+                                    .foregroundColor(.secondary)
+                            }
                         }
-                    })
+                    )
+                }
             }
         }
         .task {
             do {
-                try await viewModel.fetchCars()
+                try await listViewModel.fetchCars()
             } catch {
                 print(error.localizedDescription)
             }
-            
         }
     }
 }

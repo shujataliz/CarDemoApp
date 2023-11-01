@@ -7,6 +7,7 @@
 
 import Foundation
 import ApiManager
+import SwiftUI
 
 
 struct ItemViewModel: Identifiable {
@@ -47,18 +48,25 @@ struct ItemViewModel: Identifiable {
 
 final class ListViewModel: ObservableObject {
     
-    @Published
-    private(set) var carItems: [ItemViewModel] = []
+    @Published var carItems: [ItemViewModel] = []
+    
+    public static var shared = ListViewModel()
+    
+    private init() { 
+        print("init called")
+    }
     
     func fetchCars() async throws {
         
         let api = ApiClientAdapter()
         let items = try await api.listItems
-        
-        Task { @MainActor [items, weak self] in
-            self?.carItems = Self.sorted(items.map {
+        print(items.count)
+        Task { @MainActor [items] in
+            print(items.count)
+            ListViewModel.shared.carItems.append(contentsOf:   Self.sorted(items.map {
                 ItemViewModel($0)
-            })
+            }))
+            print(ListViewModel.shared.carItems.count)
         }
     }
     

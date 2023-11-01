@@ -9,24 +9,24 @@ import SwiftUI
 
 // Create the second screen
 struct CarDetailScreen: View {
-    var car: ItemViewModel
+    var car: Int = -1
 
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: car.imageUrl))
-            Text("Selected Car Model: **\(car.title)**")
-            Text("Amount in Stock: **\(car.stock)**")
-            Text(car.moreDetail)
+            AsyncImage(url: URL(string: ListViewModel.shared.carItems[car].imageUrl))
+            Text("Selected Car Model: **\(ListViewModel.shared.carItems[car].title)**")
+            Text("Amount in Stock: **\(ListViewModel.shared.carItems[car].stock)**")
+            Text(ListViewModel.shared.carItems[car].moreDetail)
             
             Spacer()
         }
-        .navigationBarTitle(car.title)
+        .navigationBarTitle(ListViewModel.shared.carItems[car].title)
     }
 }
 
 #Preview {
     NavigationStack {
-        CarDetailScreen(car: ItemViewModel())
+        CarDetailScreen(car: 0)
     }
     
 }
