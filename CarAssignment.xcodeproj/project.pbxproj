@@ -14,6 +14,12 @@
 		500E2F972AF1C40E00EC6A49 /* CarAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E2F962AF1C40E00EC6A49 /* CarAssignmentTests.swift */; };
 		500E2FA12AF1C40E00EC6A49 /* CarAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E2FA02AF1C40E00EC6A49 /* CarAssignmentUITests.swift */; };
 		500E2FA32AF1C40E00EC6A49 /* CarAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E2FA22AF1C40E00EC6A49 /* CarAssignmentUITestsLaunchTests.swift */; };
+		500E2FB02AF1CB7C00EC6A49 /* CarDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E2FAF2AF1CB7C00EC6A49 /* CarDetailScreen.swift */; };
+		5076759A2AF1CFC400EA0273 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507675992AF1CFC400EA0273 /* ApiManager.swift */; };
+		5076759F2AF1CFF600EA0273 /* ApiClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076759E2AF1CFF600EA0273 /* ApiClientAdapter.swift */; };
+		507675A12AF1D01800EA0273 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507675A02AF1D01800EA0273 /* ListItem.swift */; };
+		507675A32AF1D2B200EA0273 /* libApiManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507675972AF1CFC400EA0273 /* libApiManager.a */; };
+		507675A72AF1D2E100EA0273 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507675A62AF1D2E100EA0273 /* ItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +37,26 @@
 			remoteGlobalIDString = 500E2F812AF1C40C00EC6A49;
 			remoteInfo = CarAssignment;
 		};
+		507675A42AF1D2B200EA0273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500E2F7A2AF1C40C00EC6A49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507675962AF1CFC400EA0273;
+			remoteInfo = ApiManager;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		507675952AF1CFC400EA0273 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		500E2F822AF1C40C00EC6A49 /* CarAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +69,12 @@
 		500E2F9C2AF1C40E00EC6A49 /* CarAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		500E2FA02AF1C40E00EC6A49 /* CarAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAssignmentUITests.swift; sourceTree = "<group>"; };
 		500E2FA22AF1C40E00EC6A49 /* CarAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		500E2FAF2AF1CB7C00EC6A49 /* CarDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailScreen.swift; sourceTree = "<group>"; };
+		507675972AF1CFC400EA0273 /* libApiManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libApiManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		507675992AF1CFC400EA0273 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		5076759E2AF1CFF600EA0273 /* ApiClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientAdapter.swift; sourceTree = "<group>"; };
+		507675A02AF1D01800EA0273 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		507675A62AF1D2E100EA0273 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507675A32AF1D2B200EA0273 /* libApiManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		507675942AF1CFC400EA0273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +116,9 @@
 				500E2F842AF1C40C00EC6A49 /* CarAssignment */,
 				500E2F952AF1C40E00EC6A49 /* CarAssignmentTests */,
 				500E2F9F2AF1C40E00EC6A49 /* CarAssignmentUITests */,
+				507675982AF1CFC400EA0273 /* ApiManager */,
 				500E2F832AF1C40C00EC6A49 /* Products */,
+				507675A22AF1D2B200EA0273 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +128,7 @@
 				500E2F822AF1C40C00EC6A49 /* CarAssignment.app */,
 				500E2F922AF1C40E00EC6A49 /* CarAssignmentTests.xctest */,
 				500E2F9C2AF1C40E00EC6A49 /* CarAssignmentUITests.xctest */,
+				507675972AF1CFC400EA0273 /* libApiManager.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +138,8 @@
 			children = (
 				500E2F852AF1C40C00EC6A49 /* CarAssignmentApp.swift */,
 				500E2F872AF1C40C00EC6A49 /* ContentView.swift */,
+				507675A62AF1D2E100EA0273 /* ItemViewModel.swift */,
+				500E2FAF2AF1CB7C00EC6A49 /* CarDetailScreen.swift */,
 				500E2F892AF1C40E00EC6A49 /* Assets.xcassets */,
 				500E2F8B2AF1C40E00EC6A49 /* Preview Content */,
 			);
@@ -127,6 +171,23 @@
 			path = CarAssignmentUITests;
 			sourceTree = "<group>";
 		};
+		507675982AF1CFC400EA0273 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				507675992AF1CFC400EA0273 /* ApiManager.swift */,
+				5076759E2AF1CFF600EA0273 /* ApiClientAdapter.swift */,
+				507675A02AF1D01800EA0273 /* ListItem.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		507675A22AF1D2B200EA0273 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +202,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				507675A52AF1D2B200EA0273 /* PBXTargetDependency */,
 			);
 			name = CarAssignment;
 			productName = CarAssignment;
@@ -183,6 +245,23 @@
 			productReference = 500E2F9C2AF1C40E00EC6A49 /* CarAssignmentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		507675962AF1CFC400EA0273 /* ApiManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5076759D2AF1CFC400EA0273 /* Build configuration list for PBXNativeTarget "ApiManager" */;
+			buildPhases = (
+				507675932AF1CFC400EA0273 /* Sources */,
+				507675942AF1CFC400EA0273 /* Frameworks */,
+				507675952AF1CFC400EA0273 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApiManager;
+			productName = ApiManager;
+			productReference = 507675972AF1CFC400EA0273 /* libApiManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +283,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 500E2F812AF1C40C00EC6A49;
 					};
+					507675962AF1CFC400EA0273 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = 500E2F7D2AF1C40C00EC6A49 /* Build configuration list for PBXProject "CarAssignment" */;
@@ -222,6 +304,7 @@
 				500E2F812AF1C40C00EC6A49 /* CarAssignment */,
 				500E2F912AF1C40E00EC6A49 /* CarAssignmentTests */,
 				500E2F9B2AF1C40E00EC6A49 /* CarAssignmentUITests */,
+				507675962AF1CFC400EA0273 /* ApiManager */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500E2FB02AF1CB7C00EC6A49 /* CarDetailScreen.swift in Sources */,
+				507675A72AF1D2E100EA0273 /* ItemViewModel.swift in Sources */,
 				500E2F882AF1C40C00EC6A49 /* ContentView.swift in Sources */,
 				500E2F862AF1C40C00EC6A49 /* CarAssignmentApp.swift in Sources */,
 			);
@@ -279,6 +364,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		507675932AF1CFC400EA0273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507675A12AF1D01800EA0273 /* ListItem.swift in Sources */,
+				5076759A2AF1CFC400EA0273 /* ApiManager.swift in Sources */,
+				5076759F2AF1CFF600EA0273 /* ApiClientAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +386,11 @@
 			isa = PBXTargetDependency;
 			target = 500E2F812AF1C40C00EC6A49 /* CarAssignment */;
 			targetProxy = 500E2F9D2AF1C40E00EC6A49 /* PBXContainerItemProxy */;
+		};
+		507675A52AF1D2B200EA0273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 507675962AF1CFC400EA0273 /* ApiManager */;
+			targetProxy = 507675A42AF1D2B200EA0273 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +642,30 @@
 			};
 			name = Release;
 		};
+		5076759B2AF1CFC400EA0273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5076759C2AF1CFC400EA0273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +701,15 @@
 			buildConfigurations = (
 				500E2FAD2AF1C40E00EC6A49 /* Debug */,
 				500E2FAE2AF1C40E00EC6A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5076759D2AF1CFC400EA0273 /* Build configuration list for PBXNativeTarget "ApiManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5076759B2AF1CFC400EA0273 /* Debug */,
+				5076759C2AF1CFC400EA0273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

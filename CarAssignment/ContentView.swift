@@ -7,15 +7,35 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @ObservedObject var viewModel: ListViewModel = ListViewModel()
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            List(viewModel.carItems) { car in
+                NavigationLink(
+                    destination: CarDetailScreen(car: car),
+                    label: {
+                        VStack(alignment:.leading) {
+                            Text(car.title)
+                            Text(car.description)
+                                .foregroundColor(.secondary)
+                        }
+                    })
+            }
         }
-        .padding()
+        .task {
+            do {
+                try await viewModel.fetchCars()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }
     }
 }
 
